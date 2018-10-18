@@ -1,0 +1,12 @@
+<div *ngIf="!searchStatus.searching">
+  <p *ngIf="launches.length == 0">Ningún lanzamiento seleccionado</p>
+  <div *ngIf="launches.length > 0">
+    <p>Total lanzamientos: {{ launches.length }}</p>
+    <ul>
+      <li *ngFor="let launch of launches; let i=index">{{ i + 1 }} - {{ launch.name }}</li>
+    </ul>
+  </div>
+</div>
+<div *ngIf="searchStatus.searching">
+    <p>Buscando lanzamientos...</p>
+</div>

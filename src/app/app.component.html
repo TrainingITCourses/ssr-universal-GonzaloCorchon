@@ -1,0 +1,15 @@
+<div *ngIf="!loading">
+  <app-search
+    [missions]="missions"
+    [agencies]="agencies"
+    [statuses]="statuses"
+    (search) = "onSearch($event)"></app-search>
+    
+    <hr />
+
+    <app-launch-listing [launches]="launches" [searchStatus]="searchStatus"></app-launch-listing>
+</div>
+<div *ngIf="loading">
+  Cargando...
+</div>
+
